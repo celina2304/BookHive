@@ -1,0 +1,12 @@
+
+
+
+# .env 
+.env.production
+.env.development
+
+# backend 
+/backend/node_modules
+
+# frontend 
+/frontend/node_modules
