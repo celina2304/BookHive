@@ -1,0 +1,21 @@
+project-root/
+│
+├── node_modules/        # Dependencies installed via npm
+├── src/                 # Main source code directory
+│   ├── config/          # Configuration files (e.g., database, environment variables)
+│   ├── controllers/     # Request handlers (business logic)
+│   ├── models/          # Mongoose schemas and models
+│   ├── routes/          # Express route definitions
+│   ├── middlewares/     # Custom middleware functions
+│   ├── utils/           # Utility functions and helpers
+│   ├── services/        # Business logic that interacts with models (optional)
+│   ├── app.js           # Express app setup and middleware
+│   └── index.js         # Entry point (starts the server)
+│
+├── test/                # Test cases
+├── .env                 # Environment variables
+├── .gitignore           # Git ignore file
+├── package.json         # Project metadata and dependencies
+├── nodemon.json         # Nodemon scripts
+├── package-lock.json    # Exact versions of dependencies
+└── README.md            # Project documentation
