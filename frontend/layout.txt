@@ -1,0 +1,46 @@
+src/
+ ├── app/                # Next.js App Router
+ │    ├── (auth)/        # Auth routes (login, register, forgot-password)
+ │    │     ├── login/page.tsx
+ │    │     └── register/page.tsx
+ │    │
+ │    ├── (dashboard)/   # Dashboard layout & routes
+ │    │     ├── layout.tsx       # Dashboard shell (sidebar + header)
+ │    │     ├── page.tsx         # Dashboard home (stats, summary)
+ │    │     ├── books/           # Books CRUD
+ │    │     │    ├── page.tsx    # Books list
+ │    │     │    ├── new/page.tsx  # Add book
+ │    │     │    └── [id]/page.tsx # Edit book
+ │    │     │
+ │    │     ├── members/         # Manage library members
+ │    │     ├── borrow/          # Borrow/Return system
+ │    │     └── settings/        # Admin settings
+ │    │
+ │    ├── api/            # API routes if you use Next API instead of Express
+ │    └── layout.tsx      # Root layout (auth, fonts, theme provider)
+ │
+ ├── components/          # Reusable UI components
+ │    ├── ui/             # shadcn/ui components (accordion, button, dialog, etc.)
+ │    ├── layout/         # App-wide layout parts (Sidebar, Navbar, Footer)
+ │    ├── charts/         # Dashboard charts (Recharts, etc.)
+ │    └── forms/          # Form components (InputField, Select, etc.)
+ │
+ ├── hooks/               # Custom React hooks
+ │    ├── useAuth.ts      # For auth state
+ │    └── useTheme.ts     # Dark/Light mode
+ │
+ ├── lib/                 # Utility functions
+ │    ├── api.ts          # Axios or fetch wrapper for backend
+ │    ├── validators.ts   # Zod/Yup schema validation
+ │
+ ├── types/               # TypeScript types
+ │    ├── book.ts
+ │    ├── member.ts
+ │    └── user.ts
+ │
+ ├── styles/              # Global styles (tailwind.config.ts handles most)
+ │    └── globals.css
+ │
+ └── config/              # App-level configs
+      ├── nav.ts          # Sidebar navigation links
+      └── theme.ts        # Theme tokens

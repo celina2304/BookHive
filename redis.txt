@@ -1,0 +1,9 @@
+import { createClient } from 'redis';
+
+const client = createClient({
+    password: 'JKbheiaIYkrFDmyosr3Jnc6fzlkHKfGv',
+    socket: {
+        host: 'redis-15187.c301.ap-south-1-1.ec2.redns.redis-cloud.com',
+        port: 15187
+    }
+});

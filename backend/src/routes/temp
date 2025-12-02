@@ -1,0 +1,36 @@
+teach me how to make a full stack nextjs project using app router
+i want a role based app - user, guest, admin, librarian
+
+i have my frontend setup in nextjs
+just want to shift my backend from nodejs + express + mongodb to nextjs api 
+
+i have routes to
+-users/ get all users (admin)
+-users/:-id get user by id (admin, user)
+-users/register register user (public)
+-users/login login user (public)
+-users/refresh generate refresh token (public)
+-users/logout logout user (public)
+-users/update-user update user (admin, user)
+-users/delete-user detele user (admin)
+
+-seeds/ retrieves books from another api and adds into database (admin)
+
+-books/ get all books (public)
+-books/author/_id get books by author id (public)
+-books/borrow/:isbn borrow books ("user", "librarian", "admin")
+-books/return/:isbn return books ("user", "librarian", "admin")
+-books/new-book add new book ("librarian", "admin")
+-books/update-book update book ("librarian", "admin")
+-books/delete-book delete book ("admin")
+-books/delete-author/:isbn delete author from a book ("admin")
+
+-authors/ get all authors (public)
+-authors/_id get author by author id (public)
+-authors/new-author add new author ("librarian", "admin")
+-authors/update-author/:_id update author ("librarian", "admin")
+-authors/delete-author/:_id delete author ("admin")
+
+i am currently storing accesstoken in localstorage and refreshtoken in cookies
+please suggest which is the safest option and the most feasable one using nextjs for both frontend and backend
+dont want to use "use client" in every page as it defeats the whole purpose
