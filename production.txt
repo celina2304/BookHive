@@ -1,0 +1,24 @@
+Sometimes you’ll want to copy data between local and Atlas.
+You can do this with mongodump + mongorestore (comes with MongoDB Database Tools).
+
+Install Tools
+
+Download MongoDB Database Tools:
+👉 https://www.mongodb.com/try/download/database-tools
+
+Add them to your PATH.
+
+Export from Local
+
+// mongodump --uri="mongodb://127.0.0.1:27017/myAppDB" --out=backup/
+This creates BSON backup files inside backup/.
+
+Import to Atlas
+
+// mongorestore --uri="mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/myAppDB" backup/myAppDB
+
+Now your local data is copied to Atlas.
+
+Reverse (Atlas → Local)
+mongodump --uri="mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/myAppDB" --out=atlas_backup/
+mongorestore --uri="mongodb://127.0.0.1:27017/myAppDB" atlas_backup/myAppDB

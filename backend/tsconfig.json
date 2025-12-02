@@ -1,0 +1,29 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    /* File Layout */
+    "rootDir": "src",
+    "outDir": "dist",
+    /* Module System */
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "esModuleInterop": true,
+    /* Node Types */
+    "types": ["node"],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "lib": ["ES2020"],
+    /* Debugging */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    /* Type Checking */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "src/types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
